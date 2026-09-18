@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alimentación y Recetas</title>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!--Bootstrap icons-->
+  <link
+  rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body class="fondo-alimentacion">
+
+<main class="container py-4">
+
+    <div class="contenedor-hashimoto">
+
+       <a href="../index.html" class="btn btn-info mt-4 float-end">Volver</a>
+
+        <h1 class="titulo-hashimoto">Alimentación y Recetas</h1>
+        <h2 class="subtitulo-hashimoto">Dieta antiinflamatoria</h2>
+
+        <h3>¿Por qué una dieta antiinflamatoria?</h3>
+        <p>
+          Una alimentación antiinflamatoria ayuda a mejorar el bienestar general, reducir síntomas
+          asociados al hipotiroidismo y apoyar el equilibrio hormonal. Se basa en alimentos naturales,
+          ricos en fibra, antioxidantes y grasas saludables.
+        </p>
+
+        <h3>Alimentos recomendados</h3>
+        <ul>
+          <li>Frutas frescas (frutos rojos, manzana, pera)</li>
+          <li>Verduras de hoja verde (espinaca, acelga, kale)</li>
+          <li>Pescados ricos en omega‑3 (salmón, sardina)</li>
+          <li>Semillas (chía, lino, sésamo)</li>
+          <li>Frutos secos (nueces, almendras)</li>
+          <li>Aceite de oliva extra virgen</li>
+        </ul>
+
+        <h3>Alimentos a evitar</h3>
+        <ul>
+          <li>Harinas refinadas</li>
+          <li>Azúcares simples</li>
+          <li>Ultraprocesados</li>
+          <li>Frituras</li>
+          <li>Embutidos</li>
+        </ul>
+
+        <h3>Recetas funcionales</h3>
+        <p>Estas recetas son fáciles, rápidas y pensadas para acompañar un estilo de vida saludable.</p>
+
+        <h4>1. Desayuno antiinflamatorio</h4>
+        <p><strong>Ingredientes:</strong></p>
+        <ul>
+          <li>Yogur natural</li>
+          <li>Frutos rojos</li>
+          <li>1 cucharada de chía</li>
+          <li>1 cucharadita de miel</li>
+        </ul>
+        <p><strong>Preparación:</strong> Mezclar todo y servir frío.</p>
+
+        <h4>2. Ensalada verde con omega‑3</h4>
+        <p><strong>Ingredientes:</strong></p>
+        <ul>
+          <li>Espinaca fresca</li>
+          <li>Tomate cherry</li>
+          <li>Palta</li>
+          <li>Salmón cocido o atún</li>
+          <li>Aceite de oliva y limón</li>
+        </ul>
+        <p><strong>Preparación:</strong> Combinar los ingredientes y aderezar con oliva y limón.</p>
+
+        <h4>3. Pollo con cúrcuma</h4>
+        <p><strong>Ingredientes:</strong></p>
+        <ul>
+          <li>Pechuga de pollo</li>
+          <li>Cúrcuma</li>
+          <li>Pimienta</li>
+          <li>Aceite de oliva</li>
+        </ul>
+        <p><strong>Preparación:</strong> Cocinar el pollo con cúrcuma y oliva hasta dorar.</p>
+
+    </div>
+
+</main>
+
+<!-- INFORMACIÓN Y AUTOR -->
+<footer class="footer-informativo">
+
+    <div class="footer-contenido">
+
+        <p class="nota-informativa">
+            <i class="bi bi-info-circle-fill"></i>
+
+            Información general con fines educativos.
+            El contenido no reemplaza la orientación de profesionales de la salud.
+        </p>
+
+        <div class="footer-linea"></div>
+
+        <p class="footer-autor">
+             Diseño y desarrollo web: Mariela Degenaro.
+        </p>
+
+    </div>
+
+</footer>
+ <!-- BOTÓN FLOTANTE DE SONIDO -->
+  <button
+    id="btn-sonido"
+    class="btn-sonido"
+    type="button"
+    title="Activar sonido">
+
+    <i id="icono-sonido"
+       class="bi bi-volume-mute-fill">
+    </i>
+  </button>
+
+  <!-- SONIDO DEL MAR -->
+  <audio id="ocean-audio" loop preload="auto">
+    <source src="../sonidos/oceanwaves.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- JAVASCRIPT -->
+  <script type="module" src="../js/index.js"></script>
+</body>
+</html>

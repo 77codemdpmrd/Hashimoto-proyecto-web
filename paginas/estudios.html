@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Estudios y análisis</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Tu CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    >
+
+</head>
+
+
+<body class="fondo-estudios">
+
+
+    <main class="container py-4">
+
+        <div class="contenedor-hashimoto">
+
+
+            <!-- BOTÓN VOLVER -->
+
+            <a
+                href="../index.html"
+                class="btn btn-info mt-4 float-end"
+            >
+                Volver
+            </a>
+
+
+
+            <!-- TÍTULO -->
+
+            <h1 class="titulo-hashimoto">
+                Estudios y análisis
+            </h1>
+
+
+
+            <!-- SUBTÍTULO -->
+
+            <h2 class="subtitulo-hashimoto">
+                Información educativa sobre algunos estudios utilizados
+                para evaluar la función de la glándula tiroides.
+            </h2>
+
+
+
+            <!-- INTRODUCCIÓN -->
+
+            <h3>
+                ¿Qué información aportan los estudios tiroideos?
+            </h3>
+
+            <p>
+                Los análisis de laboratorio pueden aportar información
+                sobre el funcionamiento de la glándula tiroides y sobre
+                la presencia de determinados anticuerpos relacionados
+                con enfermedades tiroideas autoinmunes.
+            </p>
+
+            <p>
+                La interpretación de los resultados no depende solamente
+                de un valor aislado. Los profesionales de la salud pueden
+                considerar diferentes estudios, antecedentes y otros
+                aspectos de cada persona.
+            </p>
+
+
+
+            <!-- ============================= -->
+            <!-- PANEL INTERACTIVO -->
+            <!-- ============================= -->
+
+            <section class="panel-estudios">
+
+
+                <h3>
+                    Conocer los estudios
+                </h3>
+
+
+                <p>
+                    Seleccioná un estudio para conocer de manera sencilla
+                    qué información puede aportar.
+                </p>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="botones-estudios">
+
+
+                    <button
+                        class="btn btn-info boton-estudio"
+                        data-estudio="tsh"
+                        type="button"
+                    >
+                        TSH
+                    </button>
+
+
+                    <button
+                        class="btn btn-info boton-estudio"
+                        data-estudio="t4"
+                        type="button"
+                    >
+                        T4 libre
+                    </button>
+
+
+                    <button
+                        class="btn btn-info boton-estudio"
+                        data-estudio="tpo"
+                        type="button"
+                    >
+                        Anti-TPO
+                    </button>
+
+
+                    <button
+                        class="btn btn-info boton-estudio"
+                        data-estudio="tg"
+                        type="button"
+                    >
+                        Anti-Tg
+                    </button>
+
+
+                </div>
+
+
+
+                <!--
+                    ESTE CONTENEDOR CAMBIA
+                    CUANDO EL USUARIO HACE CLICK
+                -->
+
+                <div
+                    id="resultado-estudio"
+                    class="resultado-estudio mt-4"
+                >
+
+                    <h4>
+                        Seleccioná un estudio
+                    </h4>
+
+                    <p>
+                        Aqui podes ver que significa cada uno de los estudios.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ============================= -->
+            <!-- ACLARACIÓN -->
+            <!-- ============================= -->
+
+            <section class="mt-5">
+
+
+                <h3>
+                    Interpretación de los resultados
+                </h3>
+
+
+                <p>
+                    Los valores de referencia pueden variar según el
+                    laboratorio, el método utilizado y diferentes
+                    características individuales.
+                </p>
+
+
+                <p>
+                    Por este motivo, esta sección explica de manera general
+                    qué estudia cada análisis, pero no interpreta resultados
+                    personales ni establece diagnósticos.
+                </p>
+
+
+            </section>
+
+
+
+            <!-- ============================= -->
+            <!-- FUENTES -->
+            <!-- ============================= -->
+
+            <section class="fuentes-confiables mt-5">
+
+
+                <h3>
+                    Fuentes y recursos confiables
+                </h3>
+
+
+                <p>
+                    Para ampliar la información sobre la función tiroidea,
+                    Hashimoto y los estudios utilizados durante su evaluación,
+                    pueden consultarse organismos médicos y sanitarios
+                    especializados.
+                </p>
+
+
+
+                <div class="row g-3">
+
+
+                    <!-- ATA -->
+
+                    <div class="col-md-4">
+
+                        <div class="card h-100">
+
+                            <div class="card-body">
+
+                                <i class="bi bi-heart-pulse"></i>
+
+                                <h4 class="card-title">
+                                    American Thyroid Association
+                                </h4>
+
+                                <p class="card-text">
+                                    Información especializada sobre
+                                    Hashimoto, función tiroidea,
+                                    diagnóstico y seguimiento.
+                                </p>
+
+                                <a
+                                    href="https://www.thyroid.org/hashimotos-thyroiditis/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-info"
+                                >
+                                    Ver información
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NIDDK -->
+
+                    <div class="col-md-4">
+
+                        <div class="card h-100">
+
+                            <div class="card-body">
+
+                                <i class="bi bi-clipboard2-pulse"></i>
+
+                                <h4 class="card-title">
+                                    NIDDK - NIH
+                                </h4>
+
+                                <p class="card-text">
+                                    Información en español sobre
+                                    la enfermedad de Hashimoto,
+                                    diagnóstico y pruebas tiroideas.
+                                </p>
+
+                                <a
+                                    href="https://www.niddk.nih.gov/health-information/informacion-de-la-salud/enfermedades-endocrinas/enfermedad-de-hashimoto"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-info"
+                                >
+                                    Consultar recurso
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MEDLINEPLUS -->
+
+                    <div class="col-md-4">
+
+                        <div class="card h-100">
+
+                            <div class="card-body">
+
+                                <i class="bi bi-journal-medical"></i>
+
+                                <h4 class="card-title">
+                                    MedlinePlus
+                                </h4>
+
+                                <p class="card-text">
+                                    Información médica en español
+                                    sobre pruebas de la tiroides
+                                    y enfermedades tiroideas.
+                                </p>
+
+                                <a
+                                    href="https://medlineplus.gov/spanish/lab-tests/thyroid-tests/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-info"
+                                >
+                                    Ver pruebas tiroideas
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="footer-informativo">
+
+        <div class="footer-contenido">
+
+
+            <p class="nota-informativa">
+
+                <i class="bi bi-info-circle-fill"></i>
+
+                Información general con fines educativos.
+                El contenido no reemplaza la orientación
+                de profesionales de la salud.
+
+            </p>
+
+
+            <div class="footer-linea"></div>
+
+
+            <p class="footer-autor">
+                Diseño y desarrollo web: Mariela Degenaro.
+            </p>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ============================= -->
+    <!-- BOTÓN DE SONIDO -->
+    <!-- ============================= -->
+
+    <button
+        id="btn-sonido"
+        class="btn-sonido"
+        type="button"
+        title="Activar sonido"
+    >
+
+        <i
+            id="icono-sonido"
+            class="bi bi-volume-mute-fill"
+        ></i>
+
+    </button>
+
+
+
+    <!-- ============================= -->
+    <!-- AUDIO DEL MAR -->
+    <!-- ============================= -->
+
+    <audio
+        id="ocean-audio"
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="../sonidos/oceanwaves.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script
+        type="module"
+        src="../js/index.js"
+    ></script>
+
+
+</body>
+
+</html>

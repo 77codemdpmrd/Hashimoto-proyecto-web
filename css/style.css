@@ -1,0 +1,979 @@
+/* =========================================================
+   FONDO GENERAL
+========================================================= */
+body {
+    background-image: url("../imagenes/hashimotostress.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+/* =========================================================
+   PANEL VIDRIO HASHIMOTO
+========================================================= */
+.contenedor-hashimoto {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 900px;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.contenedor-hashimoto:hover {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+/* =========================================================
+   HEADER – TÍTULO PRINCIPAL
+========================================================= */
+header h1,
+.titulo-hashimoto {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0,0,0,0.6);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.subtitulo-hashimoto {
+    font-size: 1.6rem;
+    color: #f2f2f2;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+
+.aviso-informativo {
+    max-width: 850px;
+    margin: 25px auto 35px;
+    padding: 15px 22px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+
+    color: white;
+}
+
+.aviso-informativo i {
+    font-size: 24px;
+    margin-top: 2px;
+}
+
+.aviso-informativo strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.aviso-informativo p {
+    margin: 0;
+    font-size: 0.90rem;
+    line-height: 1.5;
+}
+/* =========================================================
+   HEADER – BOTONES (WhatsApp, Instagram, Facebook)
+========================================================= */
+/* BOTONES FLOTANTES */
+.header-btn {
+  position: relative;
+  z-index: 10;                 /* encima del overlay */
+  font-size: 1.6rem;
+  padding: 10px 18px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.15); /* vidrio suave */
+  backdrop-filter: blur(4px);
+  color: #ffffff ;  /* texto blanco */
+  transition: all 0.3s ease;
+}
+
+/* ÍCONOS */
+.header-btn i {
+  color: #ffffff;             /* blanco real */
+  transition: color 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.header-btn:hover {
+  background: rgba(255,255,255,0.85); /* se vuelve blanco */
+  color: #003366;          /* texto azul */
+  transform: translateY(-4px);        /* flotadita */
+}
+
+.header-btn:hover i {
+  color: #003366;             /* ícono azul */
+}
+
+
+/* =========================================================
+   FONDO ANIMADO DEL MAR
+========================================================= */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   HEADER-MAR (capa encima del video)
+========================================================= */
+.header-mar {
+    padding: 60px 0;
+    position: relative;
+}
+
+.header-mar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+/* =========================================================
+   HERO (si lo usás en otras páginas)
+========================================================= */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+}
+
+.hero img {
+    max-height: 280px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* =========================================================
+   TEXTO GENERAL
+========================================================= */
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #003366;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    color: #005599;
+}
+
+ul li {
+    margin-bottom: .5rem;
+}
+
+/* =========================================================
+   GRID DE CARDS
+========================================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+/* TITULO */
+.card-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-align: center;
+    color: #003366;
+    margin-bottom: 12px;
+    text-decoration: none !important;
+}
+
+/* SUBTITULO */
+.card-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    color: #003366;
+    margin-bottom: 18px;
+    text-decoration: none !important;
+}
+
+/* TEXTO */
+.card-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #003366;
+}
+
+/* Quitar subrayado de cualquier card envuelta en un <a> */
+.col-sm-6.col-md-4.mb-3.d-flex.justify-content-center a,
+.col-sm-6.col-md-4.mb-3.d-flex.justify-content-center a *,
+a.text-decoration-none,
+a.text-decoration-none * {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+/* CARD MODERNA */
+.card {
+    border-radius: 22px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.20);
+    border: none;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover suave */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+
+/* IMÁGENES IGUALES */
+.card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* =========================================
+   IGUALAR TAMAÑO DE TODAS LAS CARDS
+========================================= */
+
+#temas-container > div {
+    height: 100%;
+}
+
+#temas-container > div > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#temas-container .card {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#temas-container .card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   FONDOS POR PÁGINA
+========================================================= */
+
+/* Fondo de la página Hashimoto */
+.fondo-hashimoto {
+    background-image: url("../imagenes/hashimotostress.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Fondo de la página Tratamiento */
+.fondo-tratamiento {
+    background-image: url("../imagenes/tratamiento.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Fondo de la página Alimentación */
+.fondo-alimentacion {
+    background-image: url("../imagenes/recetas.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Fondo de la página Actividad física */
+.fondo-actividad {
+    background-image: url("../imagenes/actividad.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Fondo de la página Bienestar */
+/* FONDOS POR PÁGINA */
+.fondo-bienestar {
+    background-image: url("../imagenes/bienestar.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* =========================================================
+   RESPONSIVE – AJUSTES PARA CELULAR Y TABLET
+========================================================= */
+@media (max-width: 768px) {
+
+  /* Títulos más equilibrados */
+  .titulo-hashimoto {
+    font-size: 2.4rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .subtitulo-hashimoto {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  /* Cards centradas y proporcionadas */
+  #temas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  /* Botones del header más chicos */
+  .header-btn {
+    font-size: 1.2rem;
+    padding: .5rem .7rem;
+  }
+
+  /* Video de fondo ajustado */
+  .video-background video {
+    object-fit: cover;
+    height: 100vh;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE – AJUSTES PARA CELULAR PEQUEÑO
+========================================================= */
+@media (max-width: 480px) {
+
+  .titulo-hashimoto {
+    font-size: 1.9rem;
+  }
+
+  .subtitulo-hashimoto {
+    font-size: 1rem;
+  }
+
+  .card {
+    max-width: 280px;
+  }
+
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: .9rem;
+  }
+}
+
+/* BOTÓN FLOTANTE DE SONIDO - EFECTO VIDRIO */
+
+.btn-sonido {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    /* Transparencia */
+    background: rgba(255, 255, 255, 0.18);
+
+    /* Efecto vidrio */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Borde suave */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    /* Sombra */
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+
+    /* Icono */
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Cuando pasamos el mouse */
+
+.btn-sonido:hover {
+    transform: scale(1.1);
+
+    background: rgba(255, 255, 255, 0.30);
+
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* ICONO */
+
+.btn-sonido i {
+    color: white;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Hace que se vea mejor sobre el video */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+
+/* HOVER */
+
+.btn-sonido:hover {
+    background: rgba(255, 255, 255, 0.32);
+
+    transform: scale(1.10);
+
+    box-shadow:
+        0 6px 22px rgba(0, 0, 0, 0.30),
+        inset 0 1px 1px rgba(255, 255, 255, 0.40);
+}
+
+
+/* CLICK */
+
+.btn-sonido:active {
+    transform: scale(0.95);
+}
+
+
+/* CUANDO EL SONIDO ESTÁ ACTIVO */
+
+.btn-sonido.sonando {
+    background: rgba(255, 255, 255, 0.28);
+
+    animation: pulsoSonido 2s infinite ease-in-out;
+}
+
+
+@keyframes pulsoSonido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+/* =========================================
+   FOOTER INFORMATIVO - EFECTO VIDRIO
+   ========================================= */
+
+.footer-informativo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+    margin-top: 35px;
+}
+
+
+.footer-contenido {
+    width: 90%;
+    max-width: 900px;
+
+    padding: 16px 25px;
+
+    text-align: center;
+
+    /* Vidrio inicial */
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+
+    transition:
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* TEXTO INFORMATIVO */
+
+.nota-informativa {
+    margin: 0;
+
+    font-size: 0.90rem;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    transition: color 0.4s ease;
+}
+
+
+.nota-informativa i {
+    margin-right: 7px;
+}
+
+
+/* LÍNEA DIVISORIA */
+
+.footer-linea {
+    width: 60%;
+    height: 1px;
+
+    margin: 12px auto;
+
+    background: rgba(255, 255, 255, 0.30);
+}
+
+
+/* AUTOR */
+
+.footer-autor {
+    margin: 0;
+
+    font-size: 0.85rem;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    transition: color 0.4s ease;
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.footer-contenido:hover {
+
+    /* El vidrio se vuelve mucho más blanco */
+    background: rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+
+    transform: translateY(-3px);
+}
+
+
+/* TEXTO OSCURO AL PASAR EL MOUSE */
+
+.footer-contenido:hover .nota-informativa,
+.footer-contenido:hover .footer-autor {
+
+    color: #263238;
+}
+
+
+.footer-contenido:hover .footer-linea {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   FUENTES Y RECURSOS CONFIABLES
+   ========================================== */
+
+.fuentes-confiables {
+    margin-top: 3rem;
+}
+
+.fuentes-confiables > h3 {
+    margin-bottom: 0.75rem;
+}
+
+.fuentes-confiables > p {
+    margin-bottom: 1.8rem;
+}
+
+
+/* CARDS */
+
+.fuentes-confiables .card {
+    height: 100%;
+
+    /* Fondo claro acorde al contenedor */
+    background: rgba(255, 255, 255, 0.28);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: 16px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* HOVER DE LA CARD */
+
+.fuentes-confiables .card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.58);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+/* CUERPO */
+
+.fuentes-confiables .card-body {
+    padding: 28px 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ICONOS */
+
+.fuentes-confiables .card .bi,
+.fuentes-confiables .card:hover .bi {
+    font-size: 2.2rem;
+
+    color: #0dcaf0 !important;
+
+    margin-bottom: 12px;
+}
+
+
+/* TÍTULOS */
+
+.fuentes-confiables .card .card-title,
+.fuentes-confiables .card:hover .card-title {
+
+    color: #075a9c !important;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    margin-bottom: 14px;
+}
+
+
+/* TEXTO */
+
+.fuentes-confiables .card .card-text,
+.fuentes-confiables .card:hover .card-text {
+
+    color: #34495e !important;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    flex-grow: 1;
+
+    margin-bottom: 0;
+}
+
+
+/* EVITA QUE OTRAS REGLAS HOVER CAMBIEN EL TEXTO */
+
+.fuentes-confiables .card:hover p {
+    color: #34495e !important;
+}
+
+.fuentes-confiables .card:hover h4 {
+    color: #075a9c !important;
+}
+
+
+/* BOTONES */
+
+.fuentes-confiables .btn-info {
+
+    margin-top: 20px;
+
+    padding: 9px 20px;
+
+    border-radius: 25px;
+
+    font-weight: 600;
+
+    color: #062c3d !important;
+
+    border: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* HOVER BOTÓN */
+
+.fuentes-confiables .btn-info:hover {
+
+    color: #062c3d !important;
+
+    transform: scale(1.05);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .fuentes-confiables {
+        margin-top: 2.5rem;
+    }
+
+    .fuentes-confiables .card-body {
+        padding: 24px 18px;
+    }
+}
+
+/* ==================================================
+   PANEL INTERACTIVO - ESTUDIOS Y ANÁLISIS
+   ================================================== */
+
+.panel-estudios {
+    margin-top: 35px;
+}
+
+
+/* CONTENEDOR DE LOS BOTONES */
+
+.botones-estudios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* BOTONES TSH - T4 - ANTI-TPO - ANTI-TG */
+
+.boton-estudio {
+    border-radius: 20px;
+    padding: 9px 20px;
+    font-weight: 500;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.boton-estudio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ==================================================
+   CUADRO DONDE APARECE LA INFORMACIÓN
+   ================================================== */
+
+.resultado-estudio {
+    width: 100%;
+    min-height: 180px;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    /* EFECTO VIDRIO */
+    background: rgba(255, 255, 255, 0.28);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* EFECTO CUANDO PASÁS EL MOUSE */
+
+.resultado-estudio:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255, 255, 255, 0.50);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.20);
+}
+
+
+/* TÍTULO DEL ESTUDIO */
+
+.resultado-estudio h4 {
+    color: #075a9c;
+
+    font-size: 1.45rem;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+/* TEXTO */
+
+.resultado-estudio p {
+    color: #34495e;
+
+    line-height: 1.7;
+
+    margin-bottom: 0;
+
+    white-space: pre-line;
+}
+
+
+/* ==================================================
+   RESPONSIVE - CELULARES
+   ================================================== */
+
+@media (max-width: 576px) {
+
+    .botones-estudios {
+        gap: 8px;
+    }
+
+    .boton-estudio {
+        flex: 1 1 45%;
+        padding: 8px 12px;
+    }
+
+    .resultado-estudio {
+        padding: 20px;
+        min-height: 160px;
+    }
+
+}
+/* FONDO PÁGINA ESTUDIOS */
+
+.fondo-estudios {
+    background-image: url("../imagenes/estudios.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
